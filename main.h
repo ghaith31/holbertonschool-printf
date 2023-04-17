@@ -10,14 +10,14 @@
  * @print: a function pointer for the print functions
  * @identifier: the conversion specifier
  */
-typedef struct type
+typedef struct ghaith
 {
-	char *identifier;
-	int (*print)(va_list);
-} type_t;
+	char *X;
+	int (*f)(va_list);
+} ghaith_t;
 
 int _printf(const char *, ...);
-int (*get_function(const char *specifier))(va_list);
+int (*get_function(const char *C))(va_list);
 int _putchar(char c);
 int print_char(va_list args);
 int print_str(va_list args);

@@ -7,13 +7,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	va_list args;
+	int i = 0;
+	va_list gharsalli;
 	int (*function)(va_list) = NULL;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	return (-1);
-	va_start(args, format);
+	va_start(gharsalli, format);
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1) != '%')
@@ -26,24 +26,24 @@ int _printf(const char *format, ...)
 			{
 				_putchar(*(format - 1));
 				_putchar(*format);
-				count += 2;
+				i += 2;
 				}
 			else
-				count += function(args);
+				i += function(gharsalli);
 		}
 		else if (*format == '%' && *(format + 1) == '%')
 		{
 			format++;
 			_putchar('%');
-			count++;
+			i++;
 		}
 		else
 		{
 			_putchar(*format);
-			count++;
+			i++;
 		}
 		format++;
 	}
-	va_end(args);
-	return (count);
+	va_end(gharsalli);
+	return (i);
 }
