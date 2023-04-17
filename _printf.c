@@ -1,50 +1,49 @@
 #include "main.h"
 /**
- * _printf - function like printf of studio.h
- * @format: input string containg various arguments
+ * _printf - function like printf of stdio.
+ * @format: input string containg various arguments.
  *
  * Return: interger
  */
-
 int _printf(const char *format, ...)
 {
-
-	int i=0;
-	va_list N;
+	int count = 0;
+	va_list args;
+	int (*function)(va_list) = NULL;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	return (-1);
-	va_start(N, format);
+	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
 			function = get_function(format);
-			if(*(format) == '\0')
+			if (*(format) == '\0')
 				return (-1);
 			else if (function == NULL)
 			{
-				putchar(*(format - 1));
-				putchar(*format);
-				i += 2;
-			}
+				_putchar(*(format - 1));
+				_putchar(*format);
+				count += 2;
+				}
 			else
-				i += function(N);
+				count += function(args);
 		}
 		else if (*format == '%' && *(format + 1) == '%')
 		{
-			format ++;
-			putchar('%');
-			i++;
+			format++;
+			_putchar('%');
+			count++;
 		}
 		else
 		{
-			putchar(*format);
-			i++;
+			_putchar(*format);
+			count++;
 		}
 		format++;
 	}
-	va_end(N);
+	va_end(args);
 	return (count);
 }
