@@ -11,10 +11,11 @@ int (*get_function(const char *C))(va_list)
 {
 	int i;
 		ghaith_t types[] = {
-			{"s", print_str},
-			{"c", print_char},
+			{"s", print_s},
+			{"c", print_c},
 			{"d", print_d},
 			{"i", print_i},
+			{"%", print_100},
 			{NULL, NULL},
 		};
 		for (i = 0; types[i].X; i++)

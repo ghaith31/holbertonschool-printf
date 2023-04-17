@@ -1,13 +1,13 @@
 #include "main.h"
 /**
  * print_str - Print astring or a char argument
- * @args: Va_list containing the string or char to print as the next element
+ * @lac1: Va_list containing the string or char to print as the next element
  *
  * Return: The number of bytes printed
  */
-int print_str(va_list args)
+int print_s(va_list lac1)
 {
-	char *str = va_arg(args, char *);
+	char *str = va_arg(lac1, char *);
 	int count = 0;
 	int RetVal;
 

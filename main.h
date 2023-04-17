@@ -19,9 +19,9 @@ typedef struct ghaith
 int _printf(const char *, ...);
 int (*get_function(const char *C))(va_list);
 int _putchar(char c);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_d(va_list args);
-int print_i(va_list args);
-
+int print_c(va_list lac1);
+int print_s(va_list lac1);
+int print_d(va_list lac1);
+int print_i(va_list lac1);
+int print_100(va_list lac1);
 #endif
