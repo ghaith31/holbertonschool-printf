@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_str - Print astring or a char argument
+ * print_s - Print astring or a char argument
  * @lac1: Va_list containing the string or char to print as the next element
  *
  * Return: The number of bytes printed

@@ -2,7 +2,8 @@
 
 /**
  * get_function - determine which print function to use.
- * @G: The character that identifie the type of the variable to print.
+ *
+ * @C: The character that identifie the type of the variable to print.
  *
  * Return: pointer to the matching print function.
  */

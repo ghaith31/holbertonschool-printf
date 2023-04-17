@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * printn - print an interger.
- * @lac1: input argument.
+ * print_d - print an interger.
+ *
+ * @lac1: hetha il args
  *
  * Return: count.
  */
@@ -37,8 +38,8 @@ int print_d(va_list lac1)
 }
 
 /**
- * printi - i and d same(kifkif wlh)
- *
+ * print_i - i and d same(kifkif wlh)
+ * @lac1: args
  * Return: i
  */
 

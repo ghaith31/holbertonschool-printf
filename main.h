@@ -1,14 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
 
 /**
- * struct type - connect conversion specifiers with the correct print function
- * @print: a function pointer for the print functions
- * @identifier: the conversion specifier
+ * struct ghaith - connect conversion specifier with the correct print function
+ * @f: a function pointer for the print functions
+ * @X: the conversion specifier
  */
 typedef struct ghaith
 {

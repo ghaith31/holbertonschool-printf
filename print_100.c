@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * 100 - return per
+ * print_100 - return per
  * @lac1: arg
  * Return: per
  */
